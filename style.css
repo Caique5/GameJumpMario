@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.game-board{
+    max-width: 80%;     /* usado para definir o comprimento horizontal*/
+    height: 500px;      /* usado para definir a altura  */
+    border: 2px black solid;   /* usado para criar uma borda*/
+    border-bottom: 20px solid green;    /* usado para criar uma borda inferior*/
+    margin: 0 auto;     /*usado para centralizar essa div*/
+    position: relative; /* usei para que os elementos"encamento, mario e etc" respeitem as delimitaçoes"bordas" que defini */
+    overflow: hidden;   /*usado para tudo que estiver fora das delimitaçoes não apareça, ou seja tudo que estiver fora da borda fica invisivel */
+    background: linear-gradient(#4fbae4, #e0f6ff);
+
+
+}
+
+.encanamento{
+    position: absolute; /* usado para que o elemento não interfira em outro elemento */
+    width: 70px;
+    height: 70px; 
+    bottom: 0;
+    /*right: -70px;           usado para definir que o elemento começa da direita */
+    animation: encanamento-animação 5s infinite; 
+
+}
+/*.bala{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    bottom: 10px;
+    animation: bala-animação 10s infinite;
+
+}*/
+.arvores{
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0px;
+    animation: arvores-animação 10s infinite;
+}
+.personagem{
+    position: absolute;
+    width: 100px;
+    height: 10s0px;
+    bottom: 0;
+    
+
+}
+.jump{
+    animation: jump-animação 600ms ease-out;
+}
+.nuvem{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    bottom: 60%;
+    right: 0;
+    animation: nuvem-animação 18s infinite;
+}
+.nuvem2{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    bottom: 40%;
+    animation: nuvem2-animação 10s infinite;
+}
+@keyframes encanamento-animação {
+    from{
+        right: -70%;
+    }
+    to {
+        right: 150%;
+    } 
+}
+@keyframes bala-animação{
+    from{
+        right: -100%;
+    }
+    to{
+        right: 200%;
+
+    }
+
+}
+@keyframes arvores-animação{
+    from{
+        right: -100%;
+    }
+    to{
+        right: 120%;
+    }
+
+}
+@keyframes jump-animação {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    70% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+
+}
+@keyframes nuvem-animação {
+    from {
+        right: -200%;
+    }
+    to {
+        right: 200%;
+    }
+}
+@keyframes nuvem2-animação{
+    from {
+        right: -200%;
+    }
+    to {
+        right: 200%;
+    }
+}
